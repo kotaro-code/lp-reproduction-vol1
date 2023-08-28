@@ -8,7 +8,7 @@ img {
     width: 95%;
 }
 
-.wrapper{
+.wrapper {
     max-width: 1300px;
     margin: 0 auto;
     padding: 0 16px;
@@ -41,8 +41,8 @@ header nav ul li {
 
 header ul li {
     /* 横並び */
-    display: inline-block; 
-    
+    display: inline-block;
+
     margin-top: 10px;
     margin-right: 40px;
 }
@@ -54,10 +54,11 @@ header ul li a {
 
 /* new article */
 .new-article {
-    display: flex; /*横並び*/
+    display: flex;
+    /*横並び*/
     justify-content: space-around;
     align-items: center;
-    padding-top: 150px;
+    padding-top: 200px;
     margin-bottom: 70px;
     text-align: center;
 }
@@ -79,7 +80,7 @@ header ul li a {
     content: "";
     display: block;
     width: 80px;
-    background-color:  black;
+    background-color: black;
     height: 1px;
     margin: 0 auto;
 }
@@ -88,6 +89,7 @@ header ul li a {
 .container {
     display: flex;
     justify-content: space-between;
+    margin-bottom: 60px;
 }
 
 main {
@@ -146,7 +148,7 @@ aside .author h4 {
     text-align: left;
 }
 
-.author img{
+.author img {
     width: 40%;
 }
 
@@ -157,7 +159,7 @@ aside .author h4 {
 
 .ranking-article a {
     text-align: center;
-    text-decoration:  none;
+    text-decoration: none;
     color: black;
 }
 
@@ -196,22 +198,111 @@ aside .author h4 {
     color: black;
 }
 
+footer {
+    font-size: 0.875rem;
+    background-color: #f7f7f7;
+}
+
+footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+}
+
+footer .item {
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.footer-title {
+    font-size: 1.125rem;
+    font-weight: bold;
+    margin-bottom: 30px;
+}
+
+.footer-list {
+    margin: 20px 0;
+}
+
+footer ul {
+    padding-left:0
+}
+
+footer ul li {
+    margin-bottom: 5px;
+    list-style: none;
+}
+
+footer ul li a {
+    text-decoration:none;
+}
+
+.footer-list .arrow {
+    position: relative;
+    display: inline-block;
+    padding-left: 12px;
+    color: #333;
+}
+
+.footer-list .arrow::before{
+    content: '';
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 6px 0 6px 8px;
+    border-color: transparent transparent transparent #333;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    margin-top: -6px;
+}
+
+footer .footer-menu{
+    border-bottom: solid 1px #777;
+}
+
+footer .footer-menu li{
+    border-top: solid 1px #777;
+    padding: 15px;
+    text-align: left;
+}
+
+footer .copyright{
+    font-size: 0.750rem;
+    text-align: center;
+    padding: 10px 0;
+}
 
 /* メディアクエリ設定 */
-@media screen and (max-width: 768px){
+@media screen and (max-width: 768px) {
     .new-article {
         flex-direction: column;
     }
 
-    .new-article .article{
+    .new-article .article {
         margin-bottom: 30px;
     }
 
-    .container{
+    .container {
         flex-direction: column;
     }
 
     aside .ranking img {
         width: 100%;
+    }
+}
+
+@media screen and (max-width: 767px){
+    footer .footer-content {
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 767px){
+    footer .item {
+        width: 100%;
+        margin-bottom: 30px;
     }
 }
